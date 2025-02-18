@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .border{
+            border-radius: 10px 0 10px 0;
+        }
+        .col-3{
+            border-radius: 20px 0 20px 0;
+        }
+        .container-fluid{
+            width: 95%;
+        }
+        .navbar-nav{
+            font-size: 14px;
+        }
+        .dropdown:hover{
+            border-top:5px solid blue;
+        }
+        .dropdown:hover .dropdown-menu {
+        display: block;
+        visibility: visible;
+        }
+        .dropdown-menu{
+            border-radius: 20px 0 20px 0;
+        }
+
+        .custom-width-lg {
+        width: 100% !important;
+        text-align: center;
+       
+        
+      
+    }
+    .card{
+        border-radius: 50px 0 50px 0 !important;
+        
+    }
+
+    /* Large screens (lg) - 40% width */
+    @media (min-width: 992px) { 
+        .custom-width-lg {
+            width: 40% !important;
+            text-align: start;
+            font-size: 3rem;
+            
+        }
+    }
+    @media (min-width: 992px) { /* Large screens (lg and above) */
+    .w-lg-75 {
+      width: 95% !important;
+    }
+  }
+  @media (max-width: 576px) { /* Applies to small screens (sm) and below */
+    .custom-height-sm {
+        height: 200vh !important;
+    }
+}
+.img-hover img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-hover:hover img {
+    transform: translateY(-30px); /* Moves the image up */
+}
+@media (max-width: 576px) {  /* For small screens (sm) */
+    .custom-heightt-sm {
+        height: 50vh !important;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="sticky-top ">
+         <header class="">
+        <nav class="navbar navbar-expand-lg pb-4 " style="background-color: #e5e9f5;">
+            <div class="container-fluid w-100 w-lg-75">
+              <a class="navbar-brand fw-semibold " href="/index.html"  style="font-size: 14px;">Elm Stock</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 fw-semibold " >
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" aria-current="page" href="#">عربي</a>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Support Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Suppliers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Become a Partner</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <header class="">
+        <nav class="navbar  navbar-expand-lg  bg-white">
+            <div class="container-fluid w-100 w-lg-75">
+              <a class="navbar-brand fs-6 fw-bold" href="#"><img src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/shared/logo1.svg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  ">
+                    <div class="dropdown ">
+                        <a class="btn fw-semibold " href="#" role="button">
+                            About Elm
+                        </a>
+                    
+                        <ul class="dropdown-menu dropdown-menu-end  " style="background-color: #e5e9f5;">
+                            <div class="d-flex gap-4">
+                                <div>
+                                <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Our values</a></li>
+                                <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                            </div>
+                         
+                            
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn" href="#" role="button">
+                            Business
+                        </a>
+                    
+                        <ul class="dropdown-menu" style="background-color: #e5e9f5;">
+                            <!-- Large screens: Display items in a row -->
+                            <div class="d-none d-lg-flex gap-4">
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                            </div>
+                    
+                            <!-- Small screens: Display items in a single column -->
+                            <div class="d-block d-lg-none">
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                                <div>
+                                    <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                    <li><a class="dropdown-item" href="#">Overview</a></li>
+                                    <li><a class="dropdown-item" href="#">Our values</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                    <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a class="btn " href="#" role="button">
+                            Sustainability
+                        </a>
+                    
+                       
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn " href="#" role="button">
+                            
+Investor Relations
+
+                        </a>
+                    
+                        <ul class="dropdown-menu  " style="background-color: #e5e9f5;">
+                            <div class="d-flex gap-4">
+                                <div>
+                                <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Our values</a></li>
+                                <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                            
+                            </div>
+                         
+                            
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn " href="#" role="button">
+                            
+Media Center
+
+                        </a>
+                    
+                        <ul class="dropdown-menu  " style="background-color: #e5e9f5;">
+                            <div class="d-flex gap-4">
+                                <div>
+                                <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Our values</a></li>
+                                <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                               
+                            </div>
+                         
+                            
+                        </ul>
+                    </div>
+                    <div class="dropdown ">
+                        <a class="btn " href="#" role="button">
+                            Recruitment
+                        </a>
+                    
+                        <ul class="dropdown-menu  " style="background-color: #e5e9f5;">
+                            <div class="d-flex gap-4">
+                                <div>
+                                <li><a class="dropdown-item fw-semibold" href="#">About Company</a></li>
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Our values</a></li>
+                                <li><a class="dropdown-item" href="#">Leadership Principles</a></li>
+                                <li><a class="dropdown-item" href="#">Factsheet</a></li>
+                                <li><a class="dropdown-item" href="#">Company Leadership</a></li>
+                                </div>
+                              
+                            </div>
+                         
+                            
+                        </ul>
+                    </div>
+                  
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+    </header>
+    </div>
+   
+
+
+    <section class="container-fluid w-100 w-lg-75 vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
+        <div class="img-container p-5 text-center">
+            <img class="img-fluid w-lg-100 w-sm-50" 
+            width="500"
+                 src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/home/tatawor-img.svg" 
+                 alt="">
+        </div>
+        
+        <div class="custom-width-lg">
+            <h1 class="fw-normal mb-4" >
+                We drive the digital transformation journey forward
+            </h1>
+            <p class="fs-4 mb-4">
+                by delivering innovative,<br>
+                advanced services and comprehensive digital solutions.
+            </p>
+            <button class="btn text-white border fs-5 p-2 mt-5" style="background-color: #53307e;">
+                Explore our Services
+            </button>
+        </div>
+    
+        
+        
+    </section>
+    
+    <div class="mt-5" style="background-color: #e5e9f5;">
+       
+       
+        <section class="container-fluid w-100 w-lg-75 custom-height-sm vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
+            
+            <div class="row d-flex m-auto gap-5">
+                <div class=" mb-5">
+                    <h1 class="fw-semibold fs-1" >Our influence</h1>
+                </div>
+                <div class="col position-relative d-flex justify-content-center img-hover  " style="width: 100%;height:auto">
+                    <div class="card p-4" >
+                        <div class="position-absolute  end-0 p-3 " style="position: relative; top:-50px">
+                            <img src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/home/ebda3.svg" width="100" alt="">
+                        </div>
+                        <div class="card-body mt-5"> <!-- Push content down to avoid overlap -->
+                            <h5 class="card-title fs-3">Creativity</h5>
+                            <p class="card-text p-1">
+                                At Elm, we are dedicated to leveraging the latest technologies while adhering to principles that promote social inclusion and equal opportunities in the communities we serve. We emphasize innovation and creative thinking to deliver outstanding results.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col position-relative d-flex justify-content-center img-hover " style="width: 100%; height:auto ">
+                    <div class="card p-4" >
+                        <div class="position-absolute  end-0 p-3 " style="position: relative; top:-50px">
+                            <img src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/home/athar.svg" width="100" alt="">
+                        </div>
+                        <div class="card-body mt-5"> <!-- Push content down to avoid overlap -->
+                            <h5 class="card-title fs-3">Social Impact
+                            </h5>
+                            <p class="card-text p-3">
+                                Elm strives to cultivate a holistic digital culture that bridges communities through sustainable digital innovation. Our commitment is to meet stakeholders' evolving needs, empowering them to achieve their goals with confidence and efficiency                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col position-relative d-flex justify-content-center img-hover" style="width: 100%;height:auto">
+                    <div class="card p-4" >
+                        <div class="position-absolute  end-0 p-3 " style="position: relative; top:-50px">
+                            <img src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/home/estdamah.svg" width="100" alt="">
+                        </div>
+                        <div class="card-body mt-5"> <!-- Push content down to avoid overlap -->
+                            <h5 class="card-title fs-3">Sustainability</h5>
+                            <p class="card-text p-3">
+                                Elm puts sustainability at the heart of everything we do. Sustainability principles have always been the driving force behind our progress, diversity, and growth. We are committed to integrating these principles into all our operations while upholding responsibility and transparency. Through the development of a comprehensive framework, we aim to realize a digital future that aligns with the needs of both local and global communities                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+   
+
+
+ 
+    <section class="container-fluid w-100 w-lg-75 vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
+        <div class="img-container p-5 text-center">
+            <img class="img-fluid w-lg-100 w-sm-50" 
+            width="500"
+                 src="https://elm.sa/Style%20Library/ar-sa/assets_new/images/home/ebtkar-img.svg" 
+                 alt="">
+        </div>
+        
+        <div class="custom-width-lg">
+            <h1 class="fw-normal mb-4" >
+                Innovation and Research
+            </h1>
+            <p class="fs-4 mb-4">
+                Elm aims to manage and execute the entire product lifecycle, from identifying and developing comprehensive solutions to launching successful products.
+            </p>
+            <button class="btn text-white border fs-5 p-2 mt-5" style="background-color: #53307e;">
+                Read More
+            </button>
+        </div>
+    </section>
+    
+
+    <div class="mt-5" style="background-color: #e5e9f5;">
+       
+       
+        <section class="container-fluid w-100 w-lg-75 custom-height-sm vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
+            
+            <div class="row d-flex m-auto gap-5">
+                <div class=" mb-5 ">
+                    <h1 class="fw-semibold fs-1" >Digital Products</h1>
+                </div>
+                <div class="card-group gap-5">
+                    <div class="card " >
+                      <img height="200" src="https://i.pinimg.com/236x/2a/b4/03/2ab403d73d9682fbbbafc2774af8bd2c.jpg" class="card-img-top" alt="...">
+                      <div class="card-body  d-flex justify-content-between align-items-center" style="background-color: #6e43b5; border-radius: 0 0 50px 0; color:white">
+                        <h5 class="card-title">Security</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <div class="card" >
+                      <img height="200" src="https://i.pinimg.com/736x/66/5e/d9/665ed9a0d687f7865365e1f8f7047d67.jpg" class="card-img-top" alt="...">
+                      <div class="card-body  d-flex justify-content-between align-items-center" style="background-color: #2e9fda; border-radius: 0 0 50px 0; color:white">
+                        <h5 class="card-title">
+                            Transportation</h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                              </svg>
+                   
+                      </div>
+                    </div>
+                    <div class="card" >
+                      <img height="200" src="https://i.pinimg.com/474x/d2/11/7d/d2117d6c6279f5ff314efc0be1e566e8.jpg" class="card-img-top" alt="...">
+                      <div class="card-body d-flex justify-content-between align-items-center" style="background-color: #0070c7; border-radius: 0 0 50px 0; color:white">
+                        <h5 class="card-title">Health</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <div class="card" >
+                        <img height="200" src="https://i.pinimg.com/236x/f5/f4/59/f5f459509e5716bf7d8336b07b25390e.jpg" class="card-img-top" alt="...">
+                        <div class="card-body  d-flex justify-content-between align-items-center" style="background-color: #f16845; border-radius: 0 0 50px 0; color:white">
+                          <h5 class="card-title">Administrative</h5>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </section>
+    </div>
+   
+    <div class="mt-5" style="background-color: #fff;">
+       
+       
+        <section class="container-fluid w-100 w-lg-75 custom-heightt-sm vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
+            <div id="counter-section" class="number d-flex justify-content-center flex-column w-75 m-auto">
+                <div class="row">
+                    <div class="col-5  p-3 text-white" style="background-color: #2e9fda;">
+                        <h1 id="years-counter" class="p-5" style="font-size: 5rem;">0+</h1>
+                        <p class="fs-5">Years towards digitization</p>
+                    </div>
+                    <div class="col-7  p-3 text-white" style="background-color: #b42d09;">
+                        <h1 id="clients-counter" class="p-5" style="font-size: 5rem;">0+</h1>
+                        <p>Clients</p>
+                    </div>
+                </div>
+        
+                <!-- Second Row: col-8 + col-4 -->
+                <div class="row mb-3">
+                    <div class="col-7  p-3 text-white" style="background-color: #f16845;">
+                        <h1 id="clients-counter-2" class="p-5" style="font-size: 5rem;">0+</h1>
+                        <p>Employees
+                        </p>
+                    </div>
+                    <div class="col-5  p-3 text-white" style="background-color: #2e9fda;">
+                        <h1 id="years-counter-2" class="p-5" style="font-size: 5rem;">0+</h1>
+                        <p>Brands</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+   
+
+    <script>
+        function animateCounter(id, target, duration) {
+            let start = 0;
+            let step = target / (duration / 10); // Adjust speed
+            let element = document.getElementById(id);
+            let interval = setInterval(() => {
+                start += step;
+                if (start >= target) {
+                    start = target;
+                    clearInterval(interval);
+                }
+                element.textContent = Math.floor(start) + "+";
+            }, 10); // Runs every 10ms
+        }
+    
+        // Intersection Observer to detect when section is visible
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter("years-counter", 30, 2000);  
+                    animateCounter("clients-counter", 700000, 3000); 
+                    animateCounter("years-counter-2", 50, 2000);
+                    animateCounter("clients-counter-2", 3000, 3000);
+                    observer.disconnect(); // Stop observing after animation starts
+                }
+            });
+        }, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+    
+        observer.observe(document.getElementById("counter-section"));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
