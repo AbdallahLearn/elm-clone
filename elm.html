@@ -76,6 +76,8 @@
     </style>
 </head>
 <body>
+
+    
     <div class="sticky-top ">
          <header class="">
         <nav class="navbar navbar-expand-lg pb-4 " style="background-color: #e5e9f5;">
@@ -89,11 +91,21 @@
                     <li class="nav-item">
                         <a class="nav-link active fw-semibold" aria-current="page" href="#">عربي</a>
                       </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                      </svg></a>
-                  </li>
+                      <li class="nav-item">
+                           
+
+                                                        <!-- Button trigger modal -->
+                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg> 
+                            </button>
+  
+  <!-- Modal -->
+  
+                    </li>
+                    
+                   
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
                   </li>
@@ -291,8 +303,26 @@ Media Center
           </nav>
     </header>
     </div>
+    <div class="modal fade mt-5 " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog "  >
+          <div class="modal-content">
+           
+            <div class="modal-body d-flex align-baseline">
+              <input class="w-100 p-3" type="text">
+              <button class="btn btn-primary p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg> 
+              </button>
+            </div>
+            <div class="modal-footer m-auto">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
    
-
+     
 
     <section class="container-fluid w-100 w-lg-75 vh-100 d-flex flex-lg-row flex-column align-items-center justify-content-between">
         <div class="img-container p-5 text-center">
@@ -514,6 +544,18 @@ Media Center
         }, { threshold: 0.5 }); // Triggers when 50% of the section is visible
     
         observer.observe(document.getElementById("counter-section"));
+
+
+
+        document.getElementById("search-icon").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default behavior
+        let searchContainer = document.getElementById("search-container");
+        if (searchContainer.style.display === "none") {
+            searchContainer.style.display = "block"; // Show input field
+        } else {
+            searchContainer.style.display = "none"; // Hide input field if clicked again
+        }
+    });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

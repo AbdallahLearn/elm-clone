@@ -10,17 +10,35 @@
 </head>
 <body>
     
+    <header class="bg-primary position-fixed w-100 ">
+        <nav class="container">
+            <ul class="navbar justify-content-center gap-5  ">
+                <li class="nav-link "><a href="#" class="text-white text-decoration-none">Home</a></li>
+                <li class="nav-link"><a href="#" class="text-white text-decoration-none disabled">Contact us</a></li>
+                <li class="nav-link "><a href="/elm-clone/elm.html" class="text-black text-decoration-none btn bg-white ">Elm Page</a></li>
+                <!-- <li class="nav-link "><a href="/elm.html" class="text-black text-decoration-none btn bg-white ">Elm Page</a></li> -->
+
+            </ul>
+        </nav>
+    </header>
     
     <div class="container vh-100 d-flex align-items-center justify-content-center">
         
         <form class="shadow shadow-lg rounded-3 p-5" >
-            <a href="/elm.html">Elm Page</a>
             <h1 class="fs-4 text-center p-2">Login page </h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+              </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Phone Number</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
@@ -33,6 +51,13 @@
           </form>
     </div>
 
+
+
+    <footer class="bg-dark p-3 ">
+        <p class="text-center text-white">
+            create by <a href="https://abdullahjhn.netlify.app/" class="text-decoration-none text-primary">Abdullah Aljohani</a>
+        </p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
